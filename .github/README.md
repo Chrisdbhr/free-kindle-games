@@ -4,9 +4,9 @@ A collection of classic games optimized for Amazon Kindle's experimental browser
 
 **Play now:** [nullcomma.com](https://nullcomma.com)
 
-## Games
+![Kindle Games Screenshot](https://cms.nullcomma.com/assets/1ac06e77-ea18-4d10-b8cb-eb155c4c7f97?format=webp&width=600&height=400)
 
-![Kindle Games Screenshot](https://cms.nullcomma.com/assets/1ac06e77-ea18-4d10-b8cb-eb155c4c7f97?format=webp&width=1200&height=400)
+## Games
 
 | | | |
 |:---:|:---:|:---:|
@@ -24,25 +24,11 @@ A collection of classic games optimized for Amazon Kindle's experimental browser
 - **AI Opponents**: Tic-Tac-Toe, Battleship, Connect 4, Dots and Boxes, Sinister Occurrences.
 - **Multiplayer**: Pass-and-play in Battleship, Connect 4, Dots and Boxes (2-4 players), Sinister Occurrences (group mystery solving).
 
-## Sinister Occurrences
-
-A Black Stories-style mystery game with 20 stories (10 light, 10 dark). One player reads the situation, others ask yes/no questions to solve the mystery. Built-in timer tracks solve time.
-
-## Installation
-
-1. Clone this repository.
-2. Deploy to a static file server (Nginx, GitHub Pages, etc.).
-3. Access `index.html` from your Kindle's web browser.
-
 ## Tech Stack
 
 - HTML5 / CSS3 (Legacy WebKit)
 - Vanilla JavaScript (ES5)
 - App Cache (Offline manifest)
-
-## Guidelines
-
-See [GUIDELINES.md](../GUIDELINES.md) for technical constraints and implementation details.
 
 ## License
 
