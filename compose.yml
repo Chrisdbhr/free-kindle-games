@@ -7,9 +7,3 @@ services:
     volumes:
       - ./:/usr/share/nginx/html:ro
     restart: unless-stopped
-    networks:
-      - nginx
-
-networks:
-  nginx:
-    external: true
