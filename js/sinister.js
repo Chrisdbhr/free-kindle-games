@@ -26,6 +26,7 @@ var availableStories = [];
 var lastStoryId = -1;
 var timerSeconds = 0;
 var timerInterval = null;
+var timerPaused = false;
 var isRevealed = false;
 
 var setupScreen = document.getElementById('setup-screen');
@@ -35,9 +36,9 @@ var storyTitle = document.getElementById('story-title');
 var storySituation = document.getElementById('story-situation');
 var storySolution = document.getElementById('story-solution');
 var timerDisplay = document.getElementById('timer-display');
+var timerStatus = document.getElementById('timer-status');
 var revealBtn = document.getElementById('btn-reveal');
 var nextBtn = document.getElementById('btn-next');
-var timerContainer = document.getElementById('timer-container');
 
 function initGame() {
     setTone('light');
@@ -81,9 +82,10 @@ function startGame() {
     isRevealed = false;
     lastStoryId = -1;
     stopTimer();
+    timerPaused = false;
     timerSeconds = 0;
     timerDisplay.innerText = '00:00';
-    timerContainer.className = 'timer-container';
+    updateTimerStatus();
     buildPool();
     nextStory();
 }
@@ -129,12 +131,13 @@ function nextStory() {
     var story = availableStories.shift();
     lastStoryId = story.id;
     isRevealed = false;
+    timerPaused = false;
 
     renderStory(story);
 
     timerSeconds = 0;
     timerDisplay.innerText = '00:00';
-    timerContainer.className = 'timer-container';
+    updateTimerStatus();
     startTimer();
 }
 
@@ -177,11 +180,33 @@ function formatTime(secs) {
     return (m < 10 ? '0' : '') + m + ':' + (s < 10 ? '0' : '') + s;
 }
 
+function toggleTimer() {
+    if (timerPaused) {
+        timerPaused = false;
+        startTimer();
+    } else {
+        timerPaused = true;
+        stopTimer();
+    }
+    updateTimerStatus();
+}
+
+function updateTimerStatus() {
+    if (timerStatus) {
+        timerStatus.innerText = timerPaused ? (typeof getTranslation !== 'undefined' ? getTranslation('sinister_paused') : '(pausado)') : '';
+    }
+}
+
+function toggleSolution() {
+    if (!isRevealed) return;
+    var sol = document.getElementById('story-solution');
+    sol.style.display = sol.style.display === 'none' ? 'block' : 'none';
+}
+
 function revealSolution() {
     if (isRevealed) return;
     isRevealed = true;
-    stopTimer();
-    timerContainer.className = 'timer-container timer-revealed';
+    updateTimerStatus();
 
     var currentStory = null;
     for (var i = 0; i < storiesData.length; i++) {

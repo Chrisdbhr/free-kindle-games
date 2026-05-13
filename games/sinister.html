@@ -36,6 +36,7 @@
             border-top: 1px solid #ccc;
             padding-top: 10px;
             display: none;
+            cursor: pointer;
         }
         .timer-container {
             text-align: center;
@@ -43,13 +44,15 @@
             font-weight: bold;
             padding: 10px;
             margin: 10px auto;
-            border: 2px solid transparent;
+            border: 2px solid black;
             width: 100px;
+            cursor: pointer;
         }
-        .timer-revealed {
-            background-color: black;
-            color: white;
-            border-color: black;
+        #timer-status {
+            display: block;
+            font-size: 11px;
+            font-weight: normal;
+            margin-top: 2px;
         }
         #controls {
             text-align: center;
@@ -101,14 +104,15 @@
             </div>
 
             <div id="game-screen" style="display: none;">
-                <div id="timer-container" class="timer-container">
+                <div id="timer-container" class="timer-container" onclick="toggleTimer()">
                     <span id="timer-display">00:00</span>
+                    <span id="timer-status"></span>
                 </div>
 
                 <div id="story-area">
                     <div id="story-title"></div>
                     <div id="story-situation"></div>
-                    <div id="story-solution"></div>
+                    <div id="story-solution" onclick="toggleSolution()"></div>
                 </div>
 
                 <div id="controls">
