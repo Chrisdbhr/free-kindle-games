@@ -115,6 +115,12 @@ function shufflePool() {
     }
 }
 
+function confirmNext() {
+    if (confirm(typeof getTranslation !== 'undefined' ? getTranslation('sinister_confirm_next') : 'Ir para o próximo mistério?')) {
+        nextStory();
+    }
+}
+
 function nextStory() {
     if (availableStories.length === 0) {
         buildPool();

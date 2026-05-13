@@ -117,6 +117,7 @@
     "sinister_reveal": "Revelar Solución",
     "sinister_paused": "(en pausa)",
     "sinister_next": "Siguiente Misterio",
+    "sinister_confirm_next": "Ir al siguiente misterio?",
     "sinister_s1_title": "El Hombre del Bar",
     "sinister_s1_situation": "Un hombre entra en un bar y pide un vaso de agua. El camarero le apunta con una pistola. El hombre sonríe, da las gracias y se va.",
     "sinister_s1_solution": "El hombre tenía hipo. El camarero lo notó y lo asustó con la pistola para curarlo. El hipo se fue y le agradeció.",
