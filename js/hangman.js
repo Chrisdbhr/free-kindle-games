@@ -4,6 +4,7 @@ var kbElement = document.getElementById('hangman-kb');
 var statusMessage = document.getElementById('status-message');
 
 var gameActive = false;
+var _hangmanRetries = 0;
 var mistakes = 0;
 var maxMistakes = 6;
 var currentWord = '';
@@ -85,13 +86,15 @@ function resetGame() {
     var words = typeof getTranslation !== 'undefined' ? getTranslation(wordKey) : null;
     
     if (!words || !words.length || typeof words === 'string') {
-        if (typeof words === 'string' && words.indexOf('words_') > -1) {
-            // Translations loading
+        if (typeof words === 'string' && words.indexOf('words_') > -1 && _hangmanRetries < 10) {
+            _hangmanRetries++;
             setTimeout(resetGame, 200);
             return;
         }
+        _hangmanRetries = 0;
         words = ['KINDLE', 'BATTERY', 'BOOK', 'SCREEN', 'PAGE', 'CAT'];
     }
+    _hangmanRetries = 0;
     
     currentWord = words[Math.floor(Math.random() * words.length)].toUpperCase();
     guessedLetters = [];

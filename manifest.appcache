@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# version 1.18 (Connect 4 polished)
+# version 1.31 (Added Sinister Stories game)
 
 CACHE:
 # HTML
@@ -12,9 +12,14 @@ battleship.html
 wordsearch.html
 hangman.html
 connect4.html
+dots.html
+sinister.html
+dev/crosswords.html
+
 
 # CSS
 css/style.css
+dev/css/crosswords.css
 
 # JS
 js/lang.js
@@ -25,6 +30,11 @@ js/battleship.js
 js/wordsearch.js
 js/hangman.js
 js/connect4.js
+js/dots.js
+dev/js/crosswords.js
+
+js/sinister.js
+
 js/scale.js
 
 # JSON Locales
@@ -46,6 +56,9 @@ img/thumb_sudoku.png
 img/thumb_battleship.png
 img/thumb_wordsearch.png
 img/thumb_hangman.png
+img/thumb_connect4.png
+img/thumb_dots.png
+
 
 NETWORK:
 *

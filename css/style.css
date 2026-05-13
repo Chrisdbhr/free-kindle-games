@@ -1,10 +1,4 @@
 /* Kindle optimized styles */
-:root {
-    --bg-color: #ffffff;
-    --text-color: #000000;
-    --border-color: #000000;
-    --hover-bg: #e0e0e0;
-}
 
 * {
     -webkit-box-sizing: border-box;
@@ -406,11 +400,24 @@ h3 {
     -webkit-box-sizing: content-box;
     -moz-box-sizing: content-box;
     box-sizing: content-box;
-    width: 320px;
+    width: 310px;
     margin: 10px auto;
     background: black;
     border: 3px solid black;
     padding: 1px 0 0 1px;
+}
+
+.battleship-board.mini {
+    width: 160px;
+    margin: 0;
+    float: left;
+}
+
+.battleship-board.mini .battleship-cell {
+    width: 15px;
+    height: 15px;
+    line-height: 15px;
+    font-size: 10px;
 }
 
 .battleship-cell {
@@ -427,13 +434,115 @@ h3 {
     user-select: none;
 }
 
-.battleship-cell.hit {
+.battleship-cell.invalid-pos {
+    background-color: white;
+    background-image: -webkit-repeating-linear-gradient(45deg, transparent, transparent 2px, #ccc 2px, #ccc 4px);
+    background-image: repeating-linear-gradient(45deg, transparent, transparent 2px, #ccc 2px, #ccc 4px);
+    color: #ccc;
+    cursor: not-allowed;
+}
+
+.fleet-placement-container {
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+    margin: 10px auto;
+}
+
+.placement-sidebar {
+    float: left;
+    width: 140px;
+    margin-right: 20px;
+    text-align: center;
+}
+
+.ship-list {
+    margin: 15px 0;
+    padding: 0;
+    list-style: none;
+    text-align: left;
+}
+
+.ship-item {
+    margin: 8px 0;
+    padding: 5px 10px;
+    border: 1px solid black;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.ship-item.selected {
     background: black;
     color: white;
 }
 
+.ship-item.placed {
+    text-decoration: line-through;
+    color: #888;
+    border-color: #ccc;
+}
+
+.attack-area-container {
+    width: 346px;
+    margin: 0 auto;
+}
+
+.attack-side-title {
+    float: left;
+    width: 25px;
+    height: 316px;
+    position: relative;
+    overflow: hidden;
+}
+
+.attack-side-title span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%) rotate(-90deg);
+    transform: translate(-50%, -50%) rotate(-90deg);
+    white-space: nowrap;
+    font-size: 15px;
+    font-weight: bold;
+    color: #000;
+}
+
+.game-bottom-row {
+    width: 341px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.stats-sidebar {
+    float: right;
+    width: 130px;
+    text-align: left;
+    font-size: 14px;
+    padding-top: 5px;
+}
+
+.stat-item {
+    margin-bottom: 5px;
+}
+
+.battleship-cell.hit {
+    background: white;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.battleship-cell.sunk {
+    background: black;
+    color: white;
+}
+
+.battleship-cell.ship-part {
+    background: #999;
+}
+
 .battleship-cell.miss {
-    color: #666;
+    color: #888;
     background: white;
 }
 
@@ -562,7 +671,8 @@ h3 {
     -webkit-box-sizing: content-box;
     -moz-box-sizing: content-box;
     box-sizing: content-box;
-    width: 294px; /* 7 cols * 42px each */
+    width: 294px;
+    /* 7 cols * 42px each */
     margin: 10px auto;
     background: black;
     border: 3px solid black;
@@ -602,6 +712,65 @@ h3 {
     background: white;
     border-color: black;
     box-shadow: inset 0 0 0 2px black;
+}
+
+/* Dots and Boxes specific */
+.dots-board {
+    position: relative;
+    background: white;
+    -webkit-user-select: none;
+    user-select: none;
+    /* width and height are set explicitly by JS to avoid collapse */
+}
+
+.dot {
+    position: absolute;
+    background: black;
+    z-index: 10;
+}
+
+.line {
+    position: absolute;
+    background: #e0e0e0;
+    z-index: 5;
+    cursor: pointer;
+}
+
+.line.placed {
+    background: black;
+    cursor: default;
+}
+
+.square-box {
+    position: absolute;
+    z-index: 1;
+    display: table;
+}
+
+.square-content {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.square-p1 { background: black; color: white; }
+.square-p2 { background: #999; color: black; }
+.square-p3 { background: #666; color: white; }
+.square-p4 { background: white; color: black; border: 3px solid black; }
+
+.player-score {
+    display: inline-block;
+    margin: 2px 4px;
+    padding: 4px 8px;
+    border: 1px solid black;
+    font-size: 14px;
+}
+
+.player-active {
+    background: black;
+    color: white;
 }
 
 /* Mobile Responsive Zooming */

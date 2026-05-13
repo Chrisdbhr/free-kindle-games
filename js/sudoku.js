@@ -249,7 +249,7 @@ function checkWinCondition() {
                 if (c) c.className = c.className.replace(' selected', '');
             }
         } else {
-            // Error handling ignored for E-ink
+            statusMessage.innerText = typeof getTranslation !== 'undefined' ? getTranslation('sudoku_incorrect') : 'There are errors on the board!';
         }
     }
 }

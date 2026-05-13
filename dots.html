@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" manifest="manifest.appcache">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta name="description" content="Play Dots and Boxes (Pontos e Caixas) optimized for Amazon Kindle E-Readers. By Christopher Ravailhe (nullcomma.com).">
+    <meta name="keywords" content="Dots and Boxes, Pontos e Caixas, Kindle Game, E-Ink">
+    <meta name="author" content="Christopher Ravailhe">
+    <title data-i18n="dots_title">Pontos e Caixas</title>
+    <link rel="stylesheet" href="css/style.css?v=19">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-left">
+                <a href="index.html" class="btn" data-i18n="back_menu" style="padding: 2px 10px;">Menu</a>
+            </div>
+            <span class="brand-text">nullcomma.com</span>
+            <div class="header-right">
+                <h1 data-i18n="dots_title">Pontos e Caixas</h1>
+            </div>
+        </header>
+
+        <main>
+            <!-- SETUP SCREEN -->
+            <div id="setup-screen" style="text-align: center; margin-top: 20px;">
+                <img src="img/thumb_dots.png" class="detail-thumb" alt="">
+                <p data-i18n="dots_rules" style="margin: 15px 10px; font-size: 16px; border: 1px solid black; padding: 10px;"></p>
+
+                <div class="mode-selector" style="margin: 20px 0;">
+                    <button class="btn" id="btn-pve" data-i18n="mode_pve">vs IA</button>
+                    <button class="btn" id="btn-pvp" data-i18n="mode_pvp">vs Amigo</button>
+                </div>
+
+                <div id="difficulty-selector" style="display: none;">
+                    <h3 data-i18n="select_diff_ai" style="margin-bottom: 10px; font-size: 18px;">Dificuldade da IA:</h3>
+                    <div class="mode-selector">
+                        <button class="btn" id="btn-dots-easy" data-i18n="diff_easy" onclick="setDifficulty('easy')">Facil</button>
+                        <button class="btn" id="btn-dots-med" data-i18n="diff_med" onclick="setDifficulty('medium')">Medio</button>
+                        <button class="btn" id="btn-dots-hard" data-i18n="diff_hard" onclick="setDifficulty('hard')">Dificil</button>
+                    </div>
+                </div>
+
+                <p id="diff-desc-text" style="margin-bottom: 20px; font-style: italic;"></p>
+
+                <div id="player-count-selection" style="display:none; margin-bottom: 20px;">
+                    <p style="margin-bottom: 10px;" data-i18n="dots_num_players">Numero de Jogadores:</p>
+                    <button class="btn" onclick="startGame(2)" style="margin: 2px;">2</button>
+                    <button class="btn" onclick="startGame(3)" style="margin: 2px;">3</button>
+                    <button class="btn" onclick="startGame(4)" style="margin: 2px;">4</button>
+                </div>
+
+                <button class="btn" id="btn-start-pve" onclick="startGame(2)" style="font-size: 20px; padding: 10px 30px; display: none;" data-i18n="btn_start">Iniciar</button>
+            </div>
+
+            <!-- GAME SCREEN -->
+            <div id="game-screen" style="display: none; text-align: center;">
+                <div class="scores" id="score-board" style="margin-bottom: 5px;">
+                    <!-- Scores injected by JS -->
+                </div>
+
+                <div class="status-message" id="status-msg" style="margin-bottom: 5px;"></div>
+
+                <!-- The board container: height is set by JS via style to prevent collapse -->
+                <div class="dots-board" id="board" style="margin: 10px auto;"></div>
+
+                <div class="controls" style="margin-top: 10px;">
+                    <button class="btn" onclick="resetGame()" data-i18n="play_again">Recomeçar</button>
+                    <button class="btn" onclick="backToMenu()" data-i18n="back_menu" style="margin-left: 5px;">Menu</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/lang.js?v=10"></script>
+    <script src="js/dots.js?v=2"></script>
+    <script src="js/scale.js?v=1"></script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" manifest="manifest.appcache">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta name="description" content="Descubra histórias misteriosas com Acontecimentos Sinistros para Kindle. Por Christopher Ravailhe (nullcomma.com).">
+    <meta name="keywords" content="Mistérios, Jogo de Baralho, Kindle Game, E-Ink, Enigmas">
+    <meta name="author" content="Christopher Ravailhe">
+    <title data-i18n="sinister_title">Acontecimentos Sinistros</title>
+    <link rel="stylesheet" href="css/style.css?v=19">
+    <style>
+        #story-area {
+            margin: 10px 0;
+            padding: 10px;
+            border: 2px solid black;
+            min-height: 80px;
+            text-align: center;
+        }
+        #story-title {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        #story-situation {
+            font-size: 14px;
+            line-height: 1.3;
+            margin-bottom: 10px;
+        }
+        #story-solution {
+            font-size: 14px;
+            line-height: 1.3;
+            margin-top: 10px;
+            border-top: 1px solid #ccc;
+            padding-top: 10px;
+            display: none;
+        }
+        .timer-container {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            padding: 10px;
+            margin: 10px auto;
+            border: 2px solid transparent;
+            width: 100px;
+        }
+        .timer-revealed {
+            background-color: black;
+            color: white;
+            border-color: black;
+        }
+        #controls {
+            text-align: center;
+            margin-top: 15px;
+        }
+        #controls .btn {
+            min-width: 140px;
+            margin: 5px;
+            font-size: 16px;
+            padding: 10px 20px;
+        }
+        #sinister-rules-box {
+            border: 2px solid black;
+            padding: 12px;
+            margin: 15px 10px;
+            font-size: 14px;
+            line-height: 1.3;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-left">
+                <a href="index.html" class="btn" data-i18n="back_menu" style="padding: 2px 10px;">Menu</a>
+            </div>
+            <span class="brand-text">nullcomma.com</span>
+            <div class="header-right">
+                <h1 data-i18n="sinister_title">Acontecimentos Sinistros</h1>
+            </div>
+        </header>
+
+        <main>
+
+            <div id="setup-screen" style="text-align: center;">
+                <div id="sinister-rules-box">
+                    <p data-i18n="sinister_rules">Um jogador lê a situação em voz alta. Os outros fazem perguntas de "sim" ou "não" para descobrir o que realmente aconteceu. Quando alguém souber a resposta, pode tentar explicar. Se estiver errado, o jogo continua até alguém acertar ou todos desistirem.</p>
+                </div>
+
+                <div class="mode-selector" style="margin: 20px 0;">
+                    <button class="btn" id="btn-sinister-light" data-i18n="sinister_light" onclick="setTone('light')">Mistérios Leves</button>
+                    <button class="btn" id="btn-sinister-dark" data-i18n="sinister_dark" onclick="setTone('dark')">Acontecimentos Sinistros</button>
+                </div>
+
+                <p id="diff-desc-text" style="margin-bottom: 30px; font-style: italic;"></p>
+
+                <button class="btn" data-i18n="btn_start" onclick="startGame()" style="font-size: 20px; padding: 10px 30px; display: inline-block; margin: 0 auto;">Iniciar</button>
+            </div>
+
+            <div id="game-screen" style="display: none;">
+                <div id="timer-container" class="timer-container">
+                    <span id="timer-display">00:00</span>
+                </div>
+
+                <div id="story-area">
+                    <div id="story-title"></div>
+                    <div id="story-situation"></div>
+                    <div id="story-solution"></div>
+                </div>
+
+                <div id="controls">
+                    <button class="btn" id="btn-reveal" data-i18n="sinister_reveal" onclick="revealSolution()">Revelar Solução</button>
+                    <button class="btn" id="btn-next" data-i18n="sinister_next" onclick="nextStory()" style="display:none;">Próximo Mistério</button>
+                </div>
+            </div>
+
+        </main>
+
+    </div>
+    <script src="js/lang.js?v=10"></script>
+    <script src="js/scale.js?v=1"></script>
+    <script src="js/sinister.js?v=1"></script>
+</body>
+</html>

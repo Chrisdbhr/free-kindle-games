@@ -8,15 +8,16 @@ A collection of classic games optimized for the Amazon Kindle's experimental bro
 |:---:|:---:|:---:|
 | [![Tic-Tac-Toe](img/thumb_tictactoe.png)](tictactoe.html) <br> **Tic-Tac-Toe** | [![Memory Game](img/thumb_memory.png)](memory.html) <br> **Memory Game** | [![Sudoku](img/thumb_sudoku.png)](sudoku.html) <br> **Sudoku** |
 | [![Battleship](img/thumb_battleship.png)](battleship.html) <br> **Battleship** | [![Word Search](img/thumb_wordsearch.png)](wordsearch.html) <br> **Word Search** | [![Hangman](img/thumb_hangman.png)](hangman.html) <br> **Hangman** |
-| [![Connect 4](img/thumb_connect4.png)](connect4.html) <br> **Connect 4** | | |
+| [![Connect 4](img/thumb_connect4.png)](connect4.html) <br> **Connect 4** | [![Dots and Boxes](img/thumb_dots.png)](dots.html) <br> **Dots and Boxes** | |
 
 ## 🚀 Features
 
 - **E-Ink Optimized**: High contrast, minimal animations, and ghosting mitigation.
 - **ES5 Compatible**: Works on old Kindle browsers without modern JS support.
 - **Offline Support**: Uses HTML5 Application Cache for play without Wi-Fi.
-- **Multilingual**: Supports Portuguese, English, and Spanish.
-- **AI Opponents**: Play against the computer in Tic-Tac-Toe, Battleship, and Connect 4.
+- **Multilingual**: Supports Portuguese, English, Spanish, French and German.
+- **AI Opponents**: Play against the computer in Tic-Tac-Toe, Battleship, Connect 4 and Dots and Boxes.
+- **Multiplayer**: Pass-and-play local multiplayer in Battleship, Connect 4 and Dots and Boxes (2-4 players).
 
 ## 📥 Installation
 

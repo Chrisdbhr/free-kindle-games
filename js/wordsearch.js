@@ -100,7 +100,7 @@ function resetGame() {
     gameActive = true;
     
     // Initial instruction message
-    statusMessage.innerText = 'Escolha a primeira letra da palavra encontrada';
+    statusMessage.innerText = typeof getTranslation !== 'undefined' ? getTranslation('ws_select_first') : 'Select the first letter of the found word';
     
     generateGrid();
     renderBoard();
@@ -224,7 +224,7 @@ function handleCellClick(index) {
         firstClick = index;
         cell.style.backgroundColor = 'black';
         cell.style.color = 'white';
-        statusMessage.innerText = 'Agora selecione a ultima letra da palavra encontrada';
+        statusMessage.innerText = typeof getTranslation !== 'undefined' ? getTranslation('ws_select_last') : 'Now select the last letter of the found word';
         
         statusMessage.style.backgroundColor = 'black';
         statusMessage.style.color = 'white';
@@ -272,14 +272,14 @@ function handleCellClick(index) {
                 statusMessage.innerText = typeof getTranslation !== 'undefined' ? getTranslation('status_win') : 'You Won!';
                 triggerWinAnimation();
             } else {
-                statusMessage.innerText = matchedWord + ' encontrada!';
+                statusMessage.innerText = matchedWord + ' ' + (typeof getTranslation !== 'undefined' ? getTranslation('ws_found') : 'found!');
                 statusMessage.style.backgroundColor = 'black';
                 statusMessage.style.color = 'white';
                 setTimeout(function() {
                     statusMessage.style.backgroundColor = 'white';
                     statusMessage.style.color = 'black';
                     if (gameActive) {
-                        statusMessage.innerText = 'Escolha a primeira letra da palavra encontrada';
+                        statusMessage.innerText = typeof getTranslation !== 'undefined' ? getTranslation('ws_select_first') : 'Select the first letter of the found word';
                     }
                 }, 1500);
             }
@@ -299,7 +299,7 @@ function handleCellClick(index) {
                 }, 200);
             }
             
-            statusMessage.innerText = 'Você deve selecionar a primeira e a ultima letra da palavra encontrada';
+            statusMessage.innerText = typeof getTranslation !== 'undefined' ? getTranslation('ws_select_endpoints') : 'You must select the first and last letter of the found word';
             statusMessage.style.backgroundColor = 'black';
             statusMessage.style.color = 'white';
             setTimeout(function() {

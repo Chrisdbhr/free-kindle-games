@@ -322,8 +322,8 @@ function makeAIMove() {
             move = getBestMoveMinimax();
         }
     } else {
-        // 99% Minimax, 1% chance of a random move to keep it interesting
-        if (Math.random() < 0.01) {
+        // 98% Minimax, 2% chance of a random move to keep it interesting
+        if (Math.random() < 0.02) {
             move = emptyIndexes[Math.floor(Math.random() * emptyIndexes.length)];
         } else {
             move = getBestMoveMinimax();

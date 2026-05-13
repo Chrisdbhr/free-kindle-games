@@ -196,7 +196,9 @@ function checkForMatch() {
             // Victory Animation for E-ink
             var allCards = document.querySelectorAll('.memory-card');
             for (var i = 0; i < allCards.length; i++) {
-                allCards[i].className += ' victory-flash';
+                if (allCards[i].className.indexOf('victory-flash') === -1) {
+                    allCards[i].className += ' victory-flash';
+                }
             }
         }
     } else {

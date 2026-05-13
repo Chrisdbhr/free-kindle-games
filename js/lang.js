@@ -31,7 +31,8 @@ function setLang(lang) {
         renderLangButtons();
     } else {
         var xhr = new XMLHttpRequest();
-        xhr.open('GET', 'locales/' + lang + '.json', true);
+        var prefix = window.LOCALES_PREFIX || '';
+        xhr.open('GET', prefix + 'locales/' + lang + '.json', true);
         xhr.onreadystatechange = function() {
             if (xhr.readyState === 4 && (xhr.status === 200 || xhr.status === 304 || xhr.status === 0)) {
                 try {
