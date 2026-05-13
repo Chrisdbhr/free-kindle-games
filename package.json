@@ -1,0 +1,23 @@
+{
+  "name": "kindle-games",
+  "version": "1.0.0",
+  "description": "A collection of classic games optimized for the Amazon Kindle's experimental browser and E-Ink displays.",
+  "scripts": {
+    "test": "node tests/verify.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chrisdbhr/chris-kindle-games.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Chrisdbhr/chris-kindle-games/issues"
+  },
+  "homepage": "https://github.com/Chrisdbhr/chris-kindle-games#readme",
+  "dependencies": {
+    "playwright": "^1.60.0"
+  }
+}
