@@ -10,9 +10,9 @@ A collection of classic games optimized for the Amazon Kindle's experimental bro
 
 | | | |
 |:---:|:---:|:---:|
-| [![Tic-Tac-Toe](img/thumb_tictactoe.png)](tictactoe.html) <br> **Tic-Tac-Toe** | [![Memory Game](img/thumb_memory.png)](memory.html) <br> **Memory Game** | [![Sudoku](img/thumb_sudoku.png)](sudoku.html) <br> **Sudoku** |
-| [![Battleship](img/thumb_battleship.png)](battleship.html) <br> **Battleship** | [![Word Search](img/thumb_wordsearch.png)](wordsearch.html) <br> **Word Search** | [![Hangman](img/thumb_hangman.png)](hangman.html) <br> **Hangman** |
-| [![Connect 4](img/thumb_connect4.png)](connect4.html) <br> **Connect 4** | [![Dots and Boxes](img/thumb_dots.png)](dots.html) <br> **Dots and Boxes** | [Sinister Occurrences](sinister.html) <br> **Sinister Occurrences** |
+| [![Tic-Tac-Toe](img/thumb_tictactoe.png)](games/tictactoe.html) <br> **Tic-Tac-Toe** | [![Memory Game](img/thumb_memory.png)](games/memory.html) <br> **Memory Game** | [![Sudoku](img/thumb_sudoku.png)](games/sudoku.html) <br> **Sudoku** |
+| [![Battleship](img/thumb_battleship.png)](games/battleship.html) <br> **Battleship** | [![Word Search](img/thumb_wordsearch.png)](games/wordsearch.html) <br> **Word Search** | [![Hangman](img/thumb_hangman.png)](games/hangman.html) <br> **Hangman** |
+| [![Connect 4](img/thumb_connect4.png)](games/connect4.html) <br> **Connect 4** | [![Dots and Boxes](img/thumb_dots.png)](games/dots.html) <br> **Dots and Boxes** | [Sinister Occurrences](games/sinister.html) <br> **Sinister Occurrences** |
 | [![Crosswords](img/thumb_crosswords.png)](dev/crosswords.html) <br> **Crosswords** | | |
 
 ## 🚀 Features

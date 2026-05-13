@@ -4,16 +4,16 @@ CACHE MANIFEST
 CACHE:
 # HTML
 index.html
-lang.html
-tictactoe.html
-memory.html
-sudoku.html
-battleship.html
-wordsearch.html
-hangman.html
-connect4.html
-dots.html
-sinister.html
+games/lang.html
+games/tictactoe.html
+games/memory.html
+games/sudoku.html
+games/battleship.html
+games/wordsearch.html
+games/hangman.html
+games/connect4.html
+games/dots.html
+games/sinister.html
 dev/crosswords.html
 
 

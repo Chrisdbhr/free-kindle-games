@@ -13,7 +13,8 @@ function renderLangButtons() {
     var btnSwitch = document.getElementById('btn-lang-selector');
     if (btnSwitch) {
         var localeInfo = availableLocales[currentLang];
-        btnSwitch.innerHTML = '<img src="' + localeInfo.icon + '" style="vertical-align:middle; margin-right:5px; width:30px; height:auto; filter:grayscale(100%); -webkit-filter:grayscale(100%);"> ' + currentLang.toUpperCase();
+        var prefix = window.LOCALES_PREFIX || '';
+        btnSwitch.innerHTML = '<img src="' + prefix + localeInfo.icon + '" style="vertical-align:middle; margin-right:5px; width:30px; height:auto; filter:grayscale(100%); -webkit-filter:grayscale(100%);"> ' + currentLang.toUpperCase();
     }
 }
 

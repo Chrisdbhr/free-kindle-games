@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" manifest="manifest.appcache">
+<html lang="en" manifest="../manifest.appcache">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,13 +10,13 @@
     <meta name="keywords" content="Word Search, Caca Palavras, Kindle Game, E-Ink">
     <meta name="author" content="Christopher Ravailhe">
     <title data-i18n="wordsearch_title">Caça-Palavras</title>
-    <link rel="stylesheet" href="css/style.css?v=17">
+    <link rel="stylesheet" href="../css/style.css?v=17">
 </head>
 <body>
     <div class="container">
         <header>
             <div class="header-left">
-                <a href="index.html" class="btn" data-i18n="back_menu" style="padding: 2px 10px;">Menu</a>
+                <a href="../index.html" class="btn" data-i18n="back_menu" style="padding: 2px 10px;">Menu</a>
             </div>
             <span class="brand-text">nullcomma.com</span>
             <div class="header-right">
@@ -26,7 +26,7 @@
 
         <main>
             <div id="setup-screen" style="text-align: center; margin-top: 20px;">
-                <img src="img/thumb_wordsearch.png" class="detail-thumb" alt="">
+                <img src="../img/thumb_wordsearch.png" class="detail-thumb" alt="">
                 <p data-i18n="wordsearch_rules" style="margin: 15px 10px; font-size: 16px; border: 1px solid black; padding: 10px;"></p>
                 <div class="mode-selector" style="margin: 20px 0;">
                     <button class="btn" id="btn-ws-easy" data-i18n="diff_easy" onclick="setDiffAndUI('easy')">Fácil</button>
@@ -54,8 +54,8 @@
             </div>
         </main>
     </div>
-    <script src="js/lang.js?v=9"></script>
-    <script src="js/wordsearch.js?v=9"></script>
-    <script src="js/scale.js?v=1"></script>
+    <script>window.LOCALES_PREFIX = "../";</script><script src="../js/lang.js?v=10"></script>
+    <script src="../js/wordsearch.js?v=9"></script>
+    <script src="../js/scale.js?v=1"></script>
 </body>
 </html>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" manifest="manifest.appcache">
+<html lang="en" manifest="../manifest.appcache">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +10,7 @@
     <meta name="description" content="Kindle Games language selection. Jogos otimizados para E-Reader. By Christopher Ravailhe.">
     <meta name="author" content="Christopher Ravailhe">
     <title>Idioma / Language</title>
-    <link rel="stylesheet" href="css/style.css?v=9">
+    <link rel="stylesheet" href="../css/style.css?v=9">
 </head>
 <body>
     <div class="container">
@@ -23,7 +23,7 @@
         <!-- Cancel button removed -->
     </div>
     
-    <script src="js/lang.js?v=10"></script>
+    <script>window.LOCALES_PREFIX = "../";</script><script src="../js/lang.js?v=10"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             var container = document.getElementById('lang-page-list');
@@ -41,7 +41,7 @@
                         btn.style.padding = '15px';
                         
                         var img = document.createElement('img');
-                        img.src = localeInfo.icon;
+                        img.src = (window.LOCALES_PREFIX || "") + localeInfo.icon;
                         img.style.verticalAlign = 'middle';
                         img.style.marginRight = '10px';
                         img.style.width = '40px';
@@ -55,7 +55,7 @@
                         
                         btn.onclick = function() {
                             setLang(k);
-                            window.location.href = 'index.html'; // Redireciona de volta após salvar
+                            window.location.href = '../index.html'; // Redireciona de volta após salvar
                         };
                         
                         if (k === currentLang) {
@@ -69,6 +69,6 @@
             }
         });
     </script>
-    <script src="js/scale.js?v=1"></script>
+    <script src="../js/scale.js?v=1"></script>
 </body>
 </html>
