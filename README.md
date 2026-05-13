@@ -6,6 +6,8 @@ A collection of classic games optimized for the Amazon Kindle's experimental bro
 
 ## 🎮 Games Included
 
+![Kindle Games Screenshot](https://cms.nullcomma.com/assets/1ac06e77-ea18-4d10-b8cb-eb155c4c7f97?format=webp&width=1200)
+
 | | | |
 |:---:|:---:|:---:|
 | [![Tic-Tac-Toe](img/thumb_tictactoe.png)](tictactoe.html) <br> **Tic-Tac-Toe** | [![Memory Game](img/thumb_memory.png)](memory.html) <br> **Memory Game** | [![Sudoku](img/thumb_sudoku.png)](sudoku.html) <br> **Sudoku** |
