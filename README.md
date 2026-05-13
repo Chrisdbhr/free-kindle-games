@@ -1,12 +1,12 @@
 # Free Kindle Games - Null Comma
 
-A collection of classic games optimized for the Amazon Kindle's experimental browser and E-Ink displays.
+A collection of classic games optimized for Amazon Kindle's experimental browser and E-Ink displays.
 
-**Play now at:** [nullcomma.com](https://nullcomma.com)
+**Play now:** [nullcomma.com](https://nullcomma.com)
 
-## 🎮 Games Included
+## Games
 
-![Kindle Games Screenshot](https://cms.nullcomma.com/assets/1ac06e77-ea18-4d10-b8cb-eb155c4c7f97?format=webp&width=1200)
+![Kindle Games Screenshot](https://cms.nullcomma.com/assets/1ac06e77-ea18-4d10-b8cb-eb155c4c7f97?format=webp&width=1200&height=400)
 
 | | | |
 |:---:|:---:|:---:|
@@ -15,35 +15,35 @@ A collection of classic games optimized for the Amazon Kindle's experimental bro
 | [![Connect 4](img/thumb_connect4.png)](games/connect4.html) <br> **Connect 4** | [![Dots and Boxes](img/thumb_dots.png)](games/dots.html) <br> **Dots and Boxes** | [Sinister Occurrences](games/sinister.html) <br> **Sinister Occurrences** |
 | [![Crosswords](img/thumb_crosswords.png)](dev/crosswords.html) <br> **Crosswords** | | |
 
-## 🚀 Features
+## Features
 
-- **E-Ink Optimized**: High contrast, minimal animations, and ghosting mitigation.
-- **ES5 Compatible**: Works on old Kindle browsers without modern JS support.
-- **Offline Support**: Uses HTML5 Application Cache for play without Wi-Fi.
-- **Multilingual**: Supports Portuguese, English, Spanish, French and German.
-- **AI Opponents**: Play against the computer in Tic-Tac-Toe, Battleship, Connect 4, Dots and Boxes and Sinister Occurrences.
-- **Multiplayer**: Pass-and-play local multiplayer in Battleship, Connect 4, Dots and Boxes (2-4 players) and Sinister Occurrences (group mystery solving).
+- **E-Ink Optimized**: High contrast, minimal animations, ghosting mitigation.
+- **ES5 Compatible**: Works on old Kindle browsers without modern JS.
+- **Offline**: HTML5 AppCache for play without Wi-Fi.
+- **Multilingual**: Portuguese, English, Spanish, French, German.
+- **AI Opponents**: Tic-Tac-Toe, Battleship, Connect 4, Dots and Boxes, Sinister Occurrences.
+- **Multiplayer**: Pass-and-play in Battleship, Connect 4, Dots and Boxes (2-4 players), Sinister Occurrences (group mystery solving).
 
-## 🎯 New: Sinister Occurrences
+## Sinister Occurrences
 
-A Black Stories-style mystery game with 20 intriguing stories (10 light, 10 dark). One player reads the situation aloud, others ask yes/no questions to figure out what really happened. Features a built-in timer to track how long it takes to solve each mystery!
+A Black Stories-style mystery game with 20 stories (10 light, 10 dark). One player reads the situation, others ask yes/no questions to solve the mystery. Built-in timer tracks solve time.
 
-## 📥 Installation
+## Installation
 
 1. Clone this repository.
-2. Deploy to a static file server (e.g., Nginx, GitHub Pages).
-3. Access the `index.html` from your Kindle's web browser.
+2. Deploy to a static file server (Nginx, GitHub Pages, etc.).
+3. Access `index.html` from your Kindle's web browser.
 
-## 🛠 Tech Stack
+## Tech Stack
 
-- **HTML5 / CSS3** (Legacy Webkit support)
-- **Vanilla JavaScript** (ES5 strictly)
-- **App Cache** (Offline manifest)
+- HTML5 / CSS3 (Legacy WebKit)
+- Vanilla JavaScript (ES5)
+- App Cache (Offline manifest)
 
-## 📜 Guidelines
+## Guidelines
 
-For technical constraints and implementation details, see [GUIDELINES.md](GUIDELINES.md).
+See [GUIDELINES.md](GUIDELINES.md) for technical constraints and implementation details.
 
-## 📄 License
+## License
 
-This project is open source and available under the [MIT License](LICENSE).
+MIT License. See [LICENSE](.github/LICENSE).

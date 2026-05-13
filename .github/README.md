@@ -1,33 +1,49 @@
-# Chris Kindle Games
+# Free Kindle Games - Null Comma
 
-A collection of web-based games specifically designed and optimized for the experimental browser found on legacy Kindle E-readers (e.g., Kindle Paperwhite 10th Gen).
+A collection of classic games optimized for Amazon Kindle's experimental browser and E-Ink displays.
 
-<p align="center">
-  <a href="https://kindle.chrisjogos.com">
-    <img src="https://img.shields.io/badge/PLAY%20NOW-kindle.chrisjogos.com-black?style=for-the-badge" alt="Play Now">
-  </a>
-</p>
+**Play now:** [nullcomma.com](https://nullcomma.com)
 
-## Included Games
+## Games
 
-- Battleship
-- Hangman
-- Memory
-- Sudoku
-- TicTacToe
-- Word Search
+![Kindle Games Screenshot](https://cms.nullcomma.com/assets/1ac06e77-ea18-4d10-b8cb-eb155c4c7f97?format=webp&width=1200&height=400)
 
-## Architecture and Technical Constraints
+| | | |
+|:---:|:---:|:---:|
+| [![Tic-Tac-Toe](../img/thumb_tictactoe.png)](../games/tictactoe.html) <br> **Tic-Tac-Toe** | [![Memory Game](../img/thumb_memory.png)](../games/memory.html) <br> **Memory Game** | [![Sudoku](../img/thumb_sudoku.png)](../games/sudoku.html) <br> **Sudoku** |
+| [![Battleship](../img/thumb_battleship.png)](../games/battleship.html) <br> **Battleship** | [![Word Search](../img/thumb_wordsearch.png)](../games/wordsearch.html) <br> **Word Search** | [![Hangman](../img/thumb_hangman.png)](../games/hangman.html) <br> **Hangman** |
+| [![Connect 4](../img/thumb_connect4.png)](../games/connect4.html) <br> **Connect 4** | [![Dots and Boxes](../img/thumb_dots.png)](../games/dots.html) <br> **Dots and Boxes** | [Sinister Occurrences](../games/sinister.html) <br> **Sinister Occurrences** |
+| [![Crosswords](../img/thumb_crosswords.png)](../dev/crosswords.html) <br> **Crosswords** | | |
 
-This project follows strict development guidelines to ensure compatibility with the archaic WebKit engine used in Kindle devices.
+## Features
 
-- **Strict ES5 JavaScript**: No `let`, `const`, or arrow functions are allowed. The browser engine will ignore or crash files containing ES6+ syntax.
-- **Legacy CSS**: CSS variables and many modern properties are unsupported. All colors and styles are hardcoded.
-- **E-Ink Optimization**: Specific techniques are used to mitigate ghosting, such as "Flash Clear" (hiding text before changing backgrounds) and avoiding heavy gradients.
-- **Layout Stability**: Grid systems include manual row clearing and placeholder content to prevent height collapse, a common bug in the Kindle's browser.
-- **Native Offline Support**: Uses the deprecated HTML5 Application Cache (`manifest.appcache`) for offline functionality, as modern Service Workers are not supported.
-- **Responsiveness**: Hardcoded for 600px widths, with overarching scaling applied for mobile device compatibility.
+- **E-Ink Optimized**: High contrast, minimal animations, ghosting mitigation.
+- **ES5 Compatible**: Works on old Kindle browsers without modern JS.
+- **Offline**: HTML5 AppCache for play without Wi-Fi.
+- **Multilingual**: Portuguese, English, Spanish, French, German.
+- **AI Opponents**: Tic-Tac-Toe, Battleship, Connect 4, Dots and Boxes, Sinister Occurrences.
+- **Multiplayer**: Pass-and-play in Battleship, Connect 4, Dots and Boxes (2-4 players), Sinister Occurrences (group mystery solving).
 
-## Usage
+## Sinister Occurrences
 
-The games are designed to be served via a simple web server (e.g., Nginx) and accessed directly through the Kindle's Experimental Browser.
+A Black Stories-style mystery game with 20 stories (10 light, 10 dark). One player reads the situation, others ask yes/no questions to solve the mystery. Built-in timer tracks solve time.
+
+## Installation
+
+1. Clone this repository.
+2. Deploy to a static file server (Nginx, GitHub Pages, etc.).
+3. Access `index.html` from your Kindle's web browser.
+
+## Tech Stack
+
+- HTML5 / CSS3 (Legacy WebKit)
+- Vanilla JavaScript (ES5)
+- App Cache (Offline manifest)
+
+## Guidelines
+
+See [GUIDELINES.md](../GUIDELINES.md) for technical constraints and implementation details.
+
+## License
+
+MIT License. See [LICENSE](LICENSE).
