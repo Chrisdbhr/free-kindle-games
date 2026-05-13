@@ -39,6 +39,7 @@ var timerDisplay = document.getElementById('timer-display');
 var timerStatus = document.getElementById('timer-status');
 var revealBtn = document.getElementById('btn-reveal');
 var nextBtn = document.getElementById('btn-next');
+var nextModal = document.getElementById('next-modal');
 
 function initGame() {
     setTone('light');
@@ -115,8 +116,17 @@ function shufflePool() {
     }
 }
 
-function confirmNext() {
-    if (confirm(typeof getTranslation !== 'undefined' ? getTranslation('sinister_confirm_next') : 'Ir para o próximo mistério?')) {
+function showNextConfirm() {
+    if (nextModal) {
+        nextModal.style.display = 'block';
+    }
+}
+
+function confirmNext(confirmed) {
+    if (nextModal) {
+        nextModal.style.display = 'none';
+    }
+    if (confirmed) {
         nextStory();
     }
 }

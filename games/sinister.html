@@ -117,7 +117,15 @@
 
                 <div id="controls">
                     <button class="btn" id="btn-reveal" data-i18n="sinister_reveal" onclick="revealSolution()">Revelar Solução</button>
-                    <button class="btn" id="btn-next" data-i18n="sinister_next" onclick="confirmNext()" style="display:none;">Próximo Mistério</button>
+                    <button class="btn" id="btn-next" data-i18n="sinister_next" onclick="showNextConfirm()" style="display:none;">Próximo Mistério</button>
+                </div>
+            </div>
+
+            <div id="next-modal" class="modal-overlay" style="display: none;">
+                <div class="modal-content">
+                    <p id="next-confirm-text" data-i18n="sinister_confirm_next">Ir para o próximo mistério?</p>
+                    <button class="btn" onclick="confirmNext(true)" data-i18n="btn_yes">Sim</button>
+                    <button class="btn" onclick="confirmNext(false)" data-i18n="btn_no">Não</button>
                 </div>
             </div>
 
